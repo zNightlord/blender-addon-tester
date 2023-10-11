@@ -169,7 +169,7 @@ def change_addon_dir(bpy_module: str, addon_dir: str):
     
     print(f"Change addon dir - {addon_dir}")
     if hasattr(bpy.context.preferences.filepaths, "script_directory"):
-        bpy.context.preferences.filepaths.script_directory = addon_dir.asposix()
+        bpy.context.preferences.filepaths.script_directory = addon_dir.as_posix()
     else:
       dirs = bpy.context.preferences.filepaths.script_directories
       item = dirs.new()
